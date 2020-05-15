@@ -7,10 +7,11 @@ set -x
 yum -y groupinstall "Development Tools"
 
 # Install Ruby and dependencies
+
+/bin/yum -y install curl make readline-devel ncurses-devel openssl \
+      openssl-devel libyaml-devel libffi-devel zlib-devel libxml2-devel
 /bin/rpm -i /tmp/ruby-src.rpm
 /bin/rpm -i /tmp/ruby.rpm
-/bin/yum -y install curl make readline-devel ncurses-devel openssl-devel \
-      libyaml-devel libffi-devel zlib-devel libxml2-devel
 
 gem install bundler
 
