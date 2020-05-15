@@ -13,6 +13,7 @@ yum -y groupinstall "Development Tools"
 /bin/rpm -i /tmp/ruby-src.rpm
 /bin/rpm -i /tmp/ruby.rpm
 
+gem update --system
 gem install bundler
 
 # Create a working directory
